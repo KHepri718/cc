@@ -1,0 +1,40 @@
+img {
+  /* 最大宽度不超过容器，适配不同屏幕 */
+  max-width: 100%;
+  /* 高度自动，防止图片拉伸变形 */
+  height: auto;
+  /* 给图片加轻微圆角，默认不尖锐 */
+  border-radius: 6px;
+  /* 图片和周围内容留间距 */
+  margin: 10px 0;
+  /* 过渡效果：让动画变化更丝滑 */
+  transition: all 0.3s ease;
+  /* 防止图片点击时出现默认高亮 */
+  outline: none;
+}
+
+/* 鼠标触碰图片时 - 轻微放大+旋转+变圆角 */
+img:hover {
+  /* 放大1.05倍 */
+  transform: scale(1.05) rotate(2deg);
+  /* 鼠标触碰时圆角变大，改变形状 */
+  border-radius: 20px;
+  /* 轻微阴影，增加层次感 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 点击图片时 - 轻微缩小+反向旋转 */
+img:active {
+  /* 缩小到0.98倍 */
+  transform: scale(0.98) rotate(-1deg);
+  
+  border-radius: 8px;
+}
+
+
+img {
+  border: 2px solid #eee; /* 默认浅灰色边框 */
+}
+img:active {
+  border-color: #3498db; /* 点击时边框变蓝色 */
+}
